@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+.ProfileImage {
+  width: 317px;
+  height: 317px;
+  border-radius: 10px 10px 0px 0px;
+  display: block;
+  margin: auto;
+}
+.App {
+  position: absolute;
+  width: 550px;
+  height: 868px;
+  left: 53px;
+  top: 24px;
+
+  background: #23252c;
+}
+.Navbar > h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.Navbar > h2 {
+  padding: 15px;
+  position: absolute;
+  width: 178.06px;
+  height: 14.19px;
+  left: 186px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+  color: #f3bf99;
+}
+.Navbar > a {
+  position: absolute;
+  width: 228px;
+  height: 16px;
+  top: 440px;
+  left: 161px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 120%;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.Navbar > .ButtonsContainer > .Email > button {
+  background-color: #ffffff;
+  position: absolute;
+  width: 118px;
+  height: 50px;
+  left: 151px;
+  top: 500px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.Navbar > .ButtonsContainer > .Email > button > .button-logo {
+  height: 20px;
+  width: 20px;
+  left: 16px;
+  top: 9px;
+  border-radius: 0px;
+  margin-right: 8px;
+  margin-left: 12px;
+}
+
+.Navbar > .ButtonsContainer > .LinkedIn > button {
+  color: #ffffff;
+  background-color: #5093e2;
+  position: absolute;
+  width: 118px;
+  height: 50px;
+  left: 283px;
+  top: 500px;
+  font-weight: bold;
+  border-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Navbar > .ButtonsContainer > .LinkedIn > button > .button-logo {
+  height: 16px;
+  width: 16px;
+  left: 16px;
+  top: 9px;
+  border-radius: 0px;
+  margin-right: 8px;
+}
