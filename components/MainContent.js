@@ -3,10 +3,9 @@ import joaquinAkerman from '../user-info/joaquinAkerman';
 
 function ProfileImage() {
   return (
-    <img
-      className='ProfileImage'
-      src={'../images/computer-guy.png'}
-    />
+    <div className='profile-image'>
+      <img src={'../images/computer-guy.png'} />
+    </div>
   );
 }
 
@@ -15,15 +14,11 @@ function CreateButton(props) {
     const linkedInUrl = joaquinAkerman.linkedInUrl;
     const email = joaquinAkerman.email;
     if (e.target.id === 'Email') {
-      console.log(`proximamente enviar mail a ${email}`);
+      window.location.href = `mailto:${email}?subject=Email Subject&body=Email Body`;
     }
     if (e.target.id === 'LinkedIn') {
-      console.log(`proximamente ir a ${linkedInUrl}`);
+      window.open(`${linkedInUrl}`);
     }
-    // Open the default email client with a new message pre-populated with the desired recipient and subject
-    // Para enviar mail: window.location.href = 'mailto:recipient@example.com?subject=Email%20Subject';
-    // Para abrir linkedIn: window.location.href()
-    // Proximamente: function para definir si vamos a linkedIn o enviamos mail
   }
   return (
     <div className={props.texto}>
@@ -69,20 +64,47 @@ function Navbar(props) {
   );
 }
 
+function Footer(props) {
+  return (
+    <footer className='footer'>
+      <a href={props.facebookUrl}>
+        <img
+          src='../images/Facebook-Icon.png'
+          alt='Facebook logo'
+        />
+      </a>
+      <a href={props.instagramUrl}>
+        <img
+          src='../images/Instagram-Icon.png'
+          alt='Instagram logo'
+        />
+      </a>
+      <a href={props.gitHubUrl}>
+        <img
+          src='../images/GitHub-Icon.png'
+          alt='GitHub logo'
+        />
+      </a>
+    </footer>
+  );
+}
+
 export default function MainContent(props) {
   return (
-    <div className='main-content'>
+    <div className='business-card'>
       <ProfileImage />
+      <div className='main-content'>
+        <Navbar {...joaquinAkerman} />
 
-      <Navbar {...joaquinAkerman} />
-
-      <div className='about-container'>
-        <h3>About</h3>
-        {props.about}
+        <div className='about-container'>
+          <h3>About</h3>
+          {props.about}
+        </div>
+        <div className='interest-container'>
+          <h3>Interests</h3> {props.interest}
+        </div>
       </div>
-      <div className='interest-container'>
-        <h3>Interests</h3> {props.interest}
-      </div>
+      <Footer {...joaquinAkerman} />
     </div>
   );
 }

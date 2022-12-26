@@ -486,10 +486,11 @@ var _joaquinAkerman2 = _interopRequireDefault(_joaquinAkerman);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ProfileImage() {
-  return _react2.default.createElement('img', {
-    className: 'ProfileImage',
-    src: '../images/computer-guy.png'
-  });
+  return _react2.default.createElement(
+    'div',
+    { className: 'profile-image' },
+    _react2.default.createElement('img', { src: '../images/computer-guy.png' })
+  );
 }
 
 function CreateButton(props) {
@@ -497,15 +498,11 @@ function CreateButton(props) {
     var linkedInUrl = _joaquinAkerman2.default.linkedInUrl;
     var email = _joaquinAkerman2.default.email;
     if (e.target.id === 'Email') {
-      console.log('proximamente enviar mail a ' + email);
+      window.location.href = 'mailto:' + email + '?subject=Email Subject&body=Email Body';
     }
     if (e.target.id === 'LinkedIn') {
-      console.log('proximamente ir a ' + linkedInUrl);
+      window.open('' + linkedInUrl);
     }
-    // Open the default email client with a new message pre-populated with the desired recipient and subject
-    // Para enviar mail: window.location.href = 'mailto:recipient@example.com?subject=Email%20Subject';
-    // Para abrir linkedIn: window.location.href()
-    // Proximamente: function para definir si vamos a linkedIn o enviamos mail
   }
   return _react2.default.createElement(
     'div',
@@ -564,33 +561,69 @@ function Navbar(props) {
   );
 }
 
+function Footer(props) {
+  return _react2.default.createElement(
+    'footer',
+    { className: 'footer' },
+    _react2.default.createElement(
+      'a',
+      { href: props.facebookUrl },
+      _react2.default.createElement('img', {
+        src: '../images/Facebook-Icon.png',
+        alt: 'Facebook logo'
+      })
+    ),
+    _react2.default.createElement(
+      'a',
+      { href: props.instagramUrl },
+      _react2.default.createElement('img', {
+        src: '../images/Instagram-Icon.png',
+        alt: 'Instagram logo'
+      })
+    ),
+    _react2.default.createElement(
+      'a',
+      { href: props.gitHubUrl },
+      _react2.default.createElement('img', {
+        src: '../images/GitHub-Icon.png',
+        alt: 'GitHub logo'
+      })
+    )
+  );
+}
+
 function MainContent(props) {
   return _react2.default.createElement(
     'div',
-    { className: 'main-content' },
+    { className: 'business-card' },
     _react2.default.createElement(ProfileImage, null),
-    _react2.default.createElement(Navbar, _joaquinAkerman2.default),
     _react2.default.createElement(
       'div',
-      { className: 'about-container' },
+      { className: 'main-content' },
+      _react2.default.createElement(Navbar, _joaquinAkerman2.default),
       _react2.default.createElement(
-        'h3',
-        null,
-        'About'
+        'div',
+        { className: 'about-container' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'About'
+        ),
+        props.about
       ),
-      props.about
+      _react2.default.createElement(
+        'div',
+        { className: 'interest-container' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Interests'
+        ),
+        ' ',
+        props.interest
+      )
     ),
-    _react2.default.createElement(
-      'div',
-      { className: 'interest-container' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Interests'
-      ),
-      ' ',
-      props.interest
-    )
+    _react2.default.createElement(Footer, _joaquinAkerman2.default)
   );
 }
 
@@ -30647,6 +30680,8 @@ exports.default = {
   position: 'Developer',
   gitHubUrl: 'https://github.com/JoaquinAkerman',
   linkedInUrl: 'https://www.linkedin.com/in/joaquin-akerman-9920a41a3/',
+  instagramUrl: 'https://www.instagram.com/joaquin.akerman/',
+  facebookUrl: 'https://www.facebook.com/joaquin.akerman/',
   email: 'joakinakerman@gmail.com',
   about: 'I am learning JavaScript, React, and the principles of Solid. I am trying to write maintainable and readable code with unit and integration tests (using Jest and Cypress). Iam always trying to stay up to date and use the most advanced tools possible.',
   interest: 'Passionate about technology, enthusiastic drone operator. Love to travel to the mountain for hiking and taking aerial photos with my drone.'
