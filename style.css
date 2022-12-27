@@ -1,3 +1,6 @@
+html {
+  background-color: #23252c;
+}
 .profile-image {
   width: 317px;
   height: 317px;
@@ -15,7 +18,7 @@
   width: 550px;
   height: 1000px;
   left: 53px;
-  top: 24px;
+  /* top: 24px; */
 
   background: #23252c;
 }
@@ -24,6 +27,7 @@
   height: 1000px;
 }
 .main-content {
+  background-color: #1a1b21;
   width: 317px;
   height: 600px;
   margin: auto;
@@ -142,16 +146,18 @@
 .interest-container > h3 {
   font-weight: bold;
 }
-.footer {
+.my-footer {
+  margin: auto;
   display: flex;
-  width: 550px;
+  width: 317px;
   justify-content: center;
   align-items: center;
   background-color: #161619;
   color: #fff;
   padding: 20px;
+  border-radius: 0px 0px 10px 10px;
 }
-.footer > a {
+.my-footer > a {
   width: 50px;
   height: 50px;
   margin: 0 10px;

@@ -66,7 +66,7 @@ function Navbar(props) {
 
 function Footer(props) {
   return (
-    <footer className='footer'>
+    <footer className='my-footer'>
       <a href={props.facebookUrl}>
         <img
           src='../images/Facebook-Icon.png'
