@@ -1,22 +1,37 @@
-* {
-  box-sizing: border-box;
+html {
+  background-color: #23252c;
 }
-
-.ProfileImage {
+.profile-image {
   width: 317px;
   height: 317px;
   border-radius: 10px 10px 0px 0px;
-  display: block;
+  border-bottom: 1px solid black;
+  overflow: hidden;
   margin: auto;
 }
-.App {
+.profile-image > img {
+  width: 317px;
+  height: 317px;
+}
+.app {
   position: absolute;
   width: 550px;
-  height: 868px;
+  height: 1000px;
   left: 53px;
-  top: 24px;
+  /* top: 24px; */
 
   background: #23252c;
+}
+.business-card {
+  width: 550;
+  height: 1000px;
+}
+.main-content {
+  background-color: #1a1b21;
+  width: 317px;
+  height: 600px;
+  margin: auto;
+  border: 2px solid black;
 }
 .Navbar > h1 {
   padding-top: 15px;
@@ -97,4 +112,53 @@
   top: 9px;
   border-radius: 0px;
   margin-right: 8px;
+}
+.about-container {
+  position: absolute;
+  width: 247px;
+  height: 61px;
+  left: 152px;
+  top: 561px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #dcdcdc;
+}
+
+.about-container > h3 {
+  font-weight: bold;
+}
+.interest-container {
+  position: absolute;
+  width: 247px;
+  height: 61px;
+  left: 152px;
+  top: 780px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #dcdcdc;
+}
+.interest-container > h3 {
+  font-weight: bold;
+}
+.my-footer {
+  margin: auto;
+  display: flex;
+  width: 317px;
+  justify-content: center;
+  align-items: center;
+  background-color: #161619;
+  color: #fff;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.my-footer > a {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
 }

@@ -1,13 +1,10 @@
 import MainContent from './components/MainContent';
-import ProfileImage from './components/ProfileImage';
-import Navbar from './components/Navbar';
 import React from 'react';
+import joaquinAkerman from './user-info/joaquinAkerman';
 export default function App() {
   return (
-    <div className='App'>
-      <ProfileImage />
-      <Navbar />
-      <MainContent />
+    <div className='app'>
+      <MainContent {...joaquinAkerman} />
     </div>
   );
 }
