@@ -19,7 +19,7 @@
     "webpack": "^2.0"
   },
   "scripts": {
-    "build": "webpack build --output public",
+    "build": "webpack",
     "watch": "webpack -w"
   }
 }
