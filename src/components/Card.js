@@ -1,15 +1,23 @@
 import React from 'react';
-import joaquinAkerman from '../user-info/joaquinAkerman';
+
+import { joaquinAkerman } from '../user-info/joaquinAkerman';
+import profileImage from '../images/computer-guy.png';
+import { SocialButtons } from './SocialButtons';
+import emailLogo from '../images/mail-logo.png';
+import linkedInLogo from '../images/LinkedIn-logo.png';
 
 function ProfileImage() {
   return (
     <div className='profile-image'>
-      <img src={'../images/computer-guy.png'} />
+      <img
+        src={profileImage}
+        alt='Imagen de perfil'
+      />
     </div>
   );
 }
 
-function CreateButton(props) {
+function ContactButton(props) {
   function handleClick(e) {
     const linkedInUrl = joaquinAkerman.linkedInUrl;
     const email = joaquinAkerman.email;
@@ -38,9 +46,9 @@ function CreateButton(props) {
   );
 }
 
-function Navbar(props) {
+function Header(props) {
   return (
-    <nav className='Navbar'>
+    <nav className='Header'>
       <h1>{props.name}</h1>
       <h2>{props.position}</h2>
       <a
@@ -51,50 +59,29 @@ function Navbar(props) {
       </a>
 
       <div className='ButtonsContainer'>
-        <CreateButton
+        <ContactButton
           texto='Email'
-          logo='../images/mail-logo.png'
+          logo={emailLogo}
         />
-        <CreateButton
+        <ContactButton
           texto='LinkedIn'
-          logo='../images/LinkedIn-logo.png'
+          logo={linkedInLogo}
         />
       </div>
     </nav>
   );
 }
 
-function Footer(props) {
-  return (
-    <footer className='my-footer'>
-      <a href={props.facebookUrl}>
-        <img
-          src='../images/Facebook-Icon.png'
-          alt='Facebook logo'
-        />
-      </a>
-      <a href={props.instagramUrl}>
-        <img
-          src='../images/Instagram-Icon.png'
-          alt='Instagram logo'
-        />
-      </a>
-      <a href={props.gitHubUrl}>
-        <img
-          src='../images/GitHub-Icon.png'
-          alt='GitHub logo'
-        />
-      </a>
-    </footer>
-  );
+function Footer() {
+  return <SocialButtons {...joaquinAkerman} />;
 }
-
-export default function MainContent(props) {
+///
+export default function Card(props) {
   return (
     <div className='business-card'>
-      <ProfileImage />
+      <ProfileImage {...joaquinAkerman} />
       <div className='main-content'>
-        <Navbar {...joaquinAkerman} />
+        <Header {...joaquinAkerman} />
 
         <div className='about-container'>
           <h3>About</h3>

@@ -1,4 +1,4 @@
-export default {
+const joaquinAkerman = {
   name: 'Joaquin Akerman',
   position: 'Developer',
   gitHubUrl: 'https://github.com/JoaquinAkerman',
@@ -11,3 +11,4 @@ export default {
   interest:
     'Passionate about technology, enthusiastic drone operator. Love to travel to the mountain for hiking and taking aerial photos with my drone.',
 };
+export { joaquinAkerman };
