@@ -13,12 +13,12 @@ html {
   width: 317px;
   height: 317px;
 }
-.app {
+.App {
   position: absolute;
   width: 550px;
   height: 1000px;
-  left: 53px;
-  /* top: 24px; */
+  left: 15px;
+  top: 20px;
 
   background: #23252c;
 }
@@ -29,7 +29,7 @@ html {
 .main-content {
   background-color: #1a1b21;
   width: 317px;
-  height: 600px;
+  min-height: 650px;
   margin: auto;
   border: 2px solid black;
 }
@@ -154,7 +154,7 @@ html {
   align-items: center;
   background-color: #161619;
   color: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 0px 0px 10px 10px;
 }
 .my-footer > a {

@@ -7,7 +7,7 @@ const joaquinAkerman = {
   facebookUrl: 'https://www.facebook.com/joaquin.akerman/',
   email: 'joakinakerman@gmail.com',
   about:
-    'I am learning JavaScript, React, and the principles of Solid. I am trying to write maintainable and readable code with unit and integration tests (using Jest and Cypress). Iam always trying to stay up to date and use the most advanced tools possible.',
+    'Learning JavaScript, React, and the principles of Solid. I am trying to write maintainable and readable code with unit and integration tests (using Jest and Cypress). Always trying to stay up to date and use the most advanced tools possible.',
   interest:
     'Passionate about technology, enthusiastic drone operator. Love to travel to the mountain for hiking and taking aerial photos with my drone.',
 };

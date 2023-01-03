@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { joaquinAkerman } from '../user-info/joaquinAkerman';
-import profileImage from '../images/computer-guy.png';
+import { joaquinAkerman } from '../user-info/Joaquin_Akerman/joaquinAkerman';
+import profileImage from '../user-info/Joaquin_Akerman/profileImage.png';
 import { SocialButtons } from './SocialButtons';
 import emailLogo from '../images/mail-logo.png';
 import linkedInLogo from '../images/LinkedIn-logo.png';
@@ -77,6 +77,7 @@ function Footer() {
 }
 ///
 export default function Card(props) {
+  const { about, interest } = props;
   return (
     <div className='business-card'>
       <ProfileImage {...joaquinAkerman} />
@@ -85,13 +86,18 @@ export default function Card(props) {
 
         <div className='about-container'>
           <h3>About</h3>
-          {props.about}
+          {about}
         </div>
         <div className='interest-container'>
-          <h3>Interests</h3> {props.interest}
+          <h3>Interests</h3> {interest}
         </div>
       </div>
       <Footer {...joaquinAkerman} />
     </div>
   );
 }
+
+/* function MyComponent() {
+  return (
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
+//      {/* Content goes here */
