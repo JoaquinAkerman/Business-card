@@ -13,12 +13,12 @@ html {
   width: 317px;
   height: 317px;
 }
-.app {
+.App {
   position: absolute;
   width: 550px;
   height: 1000px;
-  left: 53px;
-  /* top: 24px; */
+  left: 15px;
+  top: 20px;
 
   background: #23252c;
 }
@@ -29,7 +29,8 @@ html {
 .main-content {
   background-color: #1a1b21;
   width: 317px;
-  height: 600px;
+  min-height: 650px;
+  height: auto;
   margin: auto;
   border: 2px solid black;
 }
@@ -55,6 +56,10 @@ html {
   text-align: center;
   color: #f3bf99;
 }
+.Header {
+  width: 317;
+  height: auto;
+}
 .Header > a {
   position: absolute;
   width: 228px;
@@ -68,6 +73,9 @@ html {
   color: #f5f5f5;
 }
 
+.Header > .ButtonsContainer {
+  height: auto;
+}
 .Header > .ButtonsContainer > .Email > button {
   background-color: #ffffff;
   position: absolute;
@@ -116,7 +124,7 @@ html {
 .about-container {
   position: absolute;
   width: 247px;
-  height: 61px;
+  height: auto;
   left: 152px;
   top: 561px;
   font-family: 'Inter';
@@ -133,7 +141,8 @@ html {
 .interest-container {
   position: absolute;
   width: 247px;
-  height: 61px;
+  /* height: 61px; */
+  height: auto;
   left: 152px;
   top: 780px;
   font-family: 'Inter';
@@ -154,7 +163,7 @@ html {
   align-items: center;
   background-color: #161619;
   color: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 0px 0px 10px 10px;
 }
 .my-footer > a {
