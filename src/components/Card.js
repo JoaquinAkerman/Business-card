@@ -21,10 +21,10 @@ function ContactButton(props) {
   function handleClick(e) {
     const linkedInUrl = joaquinAkerman.linkedInUrl;
     const email = joaquinAkerman.email;
-    if (e.target.id === 'Email') {
+    if (e.target.dataset.type === 'Email') {
       window.location.href = `mailto:${email}?subject=Email Subject&body=Email Body`;
     }
-    if (e.target.id === 'LinkedIn') {
+    if (e.target.dataset.type === 'LinkedIn') {
       window.open(`${linkedInUrl}`);
     }
   }
@@ -34,6 +34,7 @@ function ContactButton(props) {
         id={props.texto}
         className='btn btn-light '
         onClick={handleClick}
+        data-type={props.texto}
       >
         <img
           src={props.logo}
@@ -96,8 +97,3 @@ export default function Card(props) {
     </div>
   );
 }
-
-/* function MyComponent() {
-  return (
-    <div style={{display: 'flex', flexWrap: 'wrap'}}>
-//      {/* Content goes here */
